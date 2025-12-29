@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', sans-serif;
+  background: radial-gradient(circle at top, #111, #000);
+  color: #fff;
+  text-align: center;
+}
+
+/* Intro */
+.intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  animation: glow 2s infinite alternate;
+}
+
+.fade-in {
+  margin: 20px 0;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+button {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Clues */
+#clues {
+  padding: 40px 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+/* Reveal */
+.reveal {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: 3.5rem;
+  color: #ffcc00;
+  animation: pop 1.5s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #e50914; }
+  to { text-shadow: 0 0 25px #ffcc00; }
+}
+
+@keyframes pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
