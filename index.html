@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Secret Santa: The Reveal 🎬</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Cinematic Intro -->
+  <section class="intro">
+    <h1 class="title">This Christmas...</h1>
+    <p class="fade-in">Someone in this office had a mission 🎁</p>
+    <button onclick="startClues()">Begin the Story ▶</button>
+  </section>
+
+  <!-- Clues Section -->
+  <section id="clues" class="hidden">
+
+    <div class="card">
+      <h2>🎵 Scene 1: The Soundtrack</h2>
+      <p>
+        “A song about believing in yourself, chasing dreams, and enjoying the journey.”
+      </p>
+      <em>Hint: Bollywood + Motivation</em>
+    </div>
+
+    <div class="card">
+      <h2>💬 Scene 2: The Line</h2>
+      <p>
+        “Slow and steady… but make it fun.”
+      </p>
+      <em>(Yes, this person loves consistency)</em>
+    </div>
+
+    <div class="card">
+      <h2>🎥 Scene 3: The Vibe</h2>
+      <p>
+        A builder. A thinker. Someone who enjoys creating things from scratch.
+      </p>
+
+      <!-- Optional Video -->
+      <iframe
+        src="https://www.youtube.com/embed/ZXsQAXx_ao0"
+        title="Cinematic Clue"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <button onclick="finalReveal()">🎁 Final Scene</button>
+  </section>
+
+  <!-- Reveal -->
+  <section id="reveal" class="hidden reveal">
+    <p class="dramatic-text">And the Secret Santa is...</p>
+    <h1 class="name">✨ Mayank Pandey ✨</h1>
+    <p class="fun-text">Happy New Year! 🎄🎉</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
