@@ -1,13 +1,13 @@
-let currentScene = 0;
+function showScene(sceneId) {
+  document.querySelectorAll(".screen").forEach(scene => {
+    scene.classList.remove("active");
+  });
 
-function goToScene(scene) {
-  document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
-  currentScene = scene;
+  document.getElementById(sceneId).classList.add("active");
 
-  const ids = ["start", "scene1", "scene2", "scene3"];
-  document.getElementById(ids[scene]).classList.add("active");
-
-  if (scene === 1) startCountdown();
+  if (sceneId === "scene1") {
+    startCountdown();
+  }
 }
 
 function startCountdown() {
@@ -23,14 +23,10 @@ function startCountdown() {
 }
 
 function fakeReveal() {
-  document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
-  document.getElementById("fake").classList.add("active");
+  showScene("fake");
 }
 
 function realReveal() {
-  document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
-  document.getElementById("reveal").classList.add("active");
-
-  const music = document.getElementById("music");
-  music.play();
+  showScene("reveal");
+  document.getElementById("music").play();
 }
