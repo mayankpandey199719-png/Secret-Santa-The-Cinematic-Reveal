@@ -7,62 +7,56 @@
 </head>
 <body>
 
-  <!-- START -->
-  <section id="start" class="screen active">
-    <h1>🎄 A Christmas Story 🎄</h1>
-    <p>One gift. Three clues. One reveal.</p>
-    <button onclick="showScene('scene1')">Start the Movie ▶</button>
-  </section>
+<!-- START SCREEN -->
+<section id="start" class="screen active">
+  <h1>🎄 A Christmas Story 🎄</h1>
+  <p>One gift. Three clues. One reveal.</p>
+  <button onclick="showScene('scene1')">Start the Movie ▶</button>
+</section>
 
-  <!-- SCENE 1 -->
-  <section id="scene1" class="screen">
-    <h2>🎬 Scene 1: The Countdown</h2>
-    <div id="countdown">5</div>
+<!-- SCENE 1 -->
+<section id="scene1" class="screen">
+  <h2>🎬 Scene 1: The Countdown</h2>
+  <div id="countdown">5</div>
+  <p class="riddle">I build things, not with bricks but with thought.</p>
+  <div class="nav">
+    <button onclick="showScene('start')">⬅ Back</button>
+    <button onclick="showScene('scene2')">Next ➡</button>
+  </div>
+</section>
 
-    <div class="nav">
-      <button onclick="showScene('start')">⬅ Back</button>
-      <button onclick="showScene('scene2')">Next ➡</button>
-    </div>
-  </section>
+<!-- SCENE 2 -->
+<section id="scene2" class="screen">
+  <h2>🎬 Scene 2: The First Name</h2>
+  <p id="scene2-text"></p>
+  <div class="nav">
+    <button onclick="showScene('scene1')">⬅ Back</button>
+    <button onclick="showScene('scene3')">Next ➡</button>
+  </div>
+</section>
 
-  <!-- SCENE 2 -->
-  <section id="scene2" class="screen">
-    <h2>🎬 Scene 2: The First Name</h2>
-    <p class="riddle">
-      My name begins with May,<br>
-      but I stay all year.
-    </p>
+<!-- SCENE 3 -->
+<section id="scene3" class="screen">
+  <h2>🎬 Scene 3: The Surname</h2>
+  <p id="scene3-text"></p>
+  <button onclick="fakeReveal()">Final Reveal 🎁</button>
+</section>
 
-    <div class="nav">
-      <button onclick="showScene('scene1')">⬅ Back</button>
-      <button onclick="showScene('scene3')">Next ➡</button>
-    </div>
-  </section>
+<!-- FAKE REVEAL -->
+<section id="fake" class="screen">
+  <h2>And the Secret Santa is…</h2>
+  <h1>🎅 Someone Else 😈</h1>
+  <button onclick="realReveal()">Reveal the Truth</button>
+</section>
 
-  <!-- SCENE 3 -->
-  <section id="scene3" class="screen">
-    <h2>🎬 Scene 3: The Surname</h2>
-    <p class="riddle">
-      A storyteller by tradition,<br>
-      carried through generations.
-    </p>
+<!-- REAL REVEAL -->
+<section id="reveal" class="screen">
+  <h2>Your Secret Santa 🎄</h2>
+  <h1>✨ Mayank Pandey ✨</h1>
+  <p>Merry Christmas & Happy Holidays! 🎁</p>
+  <audio id="music" src="christmas-music.mp3"></audio>
+</section>
 
-    <button onclick="fakeReveal()">Final Reveal 🎁</button>
-  </section>
-
-  <!-- FAKE -->
-  <section id="fake" class="screen">
-    <h2>And the Secret Santa is…</h2>
-    <h1>🎅 Someone Else 😈</h1>
-    <button onclick="realReveal()">Reveal the Truth</button>
-  </section>
-
-  <!-- REAL -->
-  <section id="reveal" class="screen">
-    <h2>Your Secret Santa 🎄</h2>
-    <h1>✨ Mayank Pandey ✨</h1>
-  </section>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
