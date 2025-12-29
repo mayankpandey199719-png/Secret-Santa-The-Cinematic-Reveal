@@ -1,24 +1,28 @@
-function showScene(sceneId) {
-  document.querySelectorAll(".screen").forEach(scene => {
-    scene.classList.remove("active");
+console.log("script.js loaded");
+
+function showScene(id) {
+  document.querySelectorAll(".screen").forEach(s => {
+    s.classList.remove("active");
   });
 
-  document.getElementById(sceneId).classList.add("active");
+  const target = document.getElementById(id);
+  if (!target) return;
 
-  if (sceneId === "scene1") {
-    startCountdown();
-  }
+  target.classList.add("active");
+
+  if (id === "scene1") startCountdown();
 }
 
 function startCountdown() {
   let count = 5;
   const el = document.getElementById("countdown");
-  el.textContent = count;
+  if (!el) return;
 
+  el.textContent = count;
   const timer = setInterval(() => {
     count--;
     el.textContent = count;
-    if (count === 0) clearInterval(timer);
+    if (count <= 0) clearInterval(timer);
   }, 1000);
 }
 
@@ -28,5 +32,4 @@ function fakeReveal() {
 
 function realReveal() {
   showScene("reveal");
-  document.getElementById("music").play();
 }
