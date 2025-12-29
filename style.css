@@ -63,7 +63,7 @@ button {
 /* Fake reveal glitch */
 #fake h1 {
   color: red;
-  animation: flicker 1s infinite;
+  animation: flicker 2s infinite;
 }
 
 @keyframes flicker {
