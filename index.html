@@ -11,7 +11,7 @@
 <section id="start" class="screen active">
   <h1 class="big-title">🎄 A Christmas Story 🎄</h1>
   <p class="tagline">One gift. Three clues. One reveal.</p>
-  <button onclick="goToScene(1)">Start the Movie ▶</button>
+  <button onclick="showScene('scene1')">Start the Movie ▶</button>
 </section>
 
 <!-- SCENE 1 -->
@@ -27,8 +27,8 @@
   </p>
 
   <div class="nav">
-    <button onclick="goToScene(0)">⬅ Back</button>
-    <button onclick="goToScene(2)">Next ➡</button>
+    <button onclick="showScene('scene1')">⬅ Back</button>
+    <button onclick="showScene('scene3')">Next ➡</button>
   </div>
 </section>
 
@@ -46,8 +46,8 @@
   <p class="answer subtle">Answer: Mayank</p>
 
   <div class="nav">
-    <button onclick="goToScene(1)">⬅ Back</button>
-    <button onclick="goToScene(3)">Next ➡</button>
+    <button onclick="showScene('scene1')">⬅ Back</button>
+    <button onclick="showScene('scene3')">Next ➡</button>
   </div>
 </section>
 
