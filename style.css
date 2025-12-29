@@ -1,19 +1,23 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: black;
-  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #111, #000);
+  color: #fff;
   text-align: center;
 }
 
+/* Screens */
 .screen {
   display: none;
   min-height: 100vh;
   padding-top: 35vh;
+  transition: opacity 0.8s ease;
+  opacity: 0;
 }
 
 .screen.active {
   display: block;
+  opacity: 1;
 }
 
 button {
@@ -23,8 +27,46 @@ button {
   cursor: pointer;
 }
 
+/* Countdown animation */
 #countdown {
   font-size: 4rem;
   margin: 20px 0;
   color: gold;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Typewriter text */
+#scene2-text, #scene3-text {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 20px auto;
+  min-height: 2em;
+}
+
+/* Final reveal animation */
+#reveal h1 {
+  animation: pop 1.5s ease-in-out;
+  color: #ffcc00;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Fake reveal glitch */
+#fake h1 {
+  color: red;
+  animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
 }
