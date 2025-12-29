@@ -7,80 +7,62 @@
 </head>
 <body>
 
-<!-- START SCREEN -->
-<section id="start" class="screen active">
-  <h1 class="big-title">🎄 A Christmas Story 🎄</h1>
-  <p class="tagline">One gift. Three clues. One reveal.</p>
-  <button onclick="showScene('scene1')">Start the Movie ▶</button>
-</section>
+  <!-- START -->
+  <section id="start" class="screen active">
+    <h1>🎄 A Christmas Story 🎄</h1>
+    <p>One gift. Three clues. One reveal.</p>
+    <button onclick="showScene('scene1')">Start the Movie ▶</button>
+  </section>
 
-<!-- SCENE 1 -->
-<section id="scene1" class="screen">
-  <h2>🎬 Scene 1: The Countdown</h2>
-  <p class="hint">Every story begins with anticipation…</p>
+  <!-- SCENE 1 -->
+  <section id="scene1" class="screen">
+    <h2>🎬 Scene 1: The Countdown</h2>
+    <div id="countdown">5</div>
 
-  <div id="countdown">5</div>
+    <div class="nav">
+      <button onclick="showScene('start')">⬅ Back</button>
+      <button onclick="showScene('scene2')">Next ➡</button>
+    </div>
+  </section>
 
-  <p class="riddle">
-    I build things, not with bricks but with thought.<br>
-    I start from zero, and make something out of nothing.
-  </p>
+  <!-- SCENE 2 -->
+  <section id="scene2" class="screen">
+    <h2>🎬 Scene 2: The First Name</h2>
+    <p class="riddle">
+      My name begins with May,<br>
+      but I stay all year.
+    </p>
 
-  <div class="nav">
-    <button onclick="showScene('scene1')">⬅ Back</button>
-    <button onclick="showScene('scene3')">Next ➡</button>
-  </div>
-</section>
+    <div class="nav">
+      <button onclick="showScene('scene1')">⬅ Back</button>
+      <button onclick="showScene('scene3')">Next ➡</button>
+    </div>
+  </section>
 
-<!-- SCENE 2 -->
-<section id="scene2" class="screen">
-  <h2>🎬 Scene 2: The First Name</h2>
+  <!-- SCENE 3 -->
+  <section id="scene3" class="screen">
+    <h2>🎬 Scene 3: The Surname</h2>
+    <p class="riddle">
+      A storyteller by tradition,<br>
+      carried through generations.
+    </p>
 
-  <p class="riddle">
-    My name begins with <strong>May</strong>,<br>
-    but I stay all year.<br><br>
-    Rearrange ambition and curiosity,<br>
-    and you’ll find me here.
-  </p>
-
-  <p class="answer subtle">Answer: Mayank</p>
-
-  <div class="nav">
-    <button onclick="showScene('scene1')">⬅ Back</button>
-    <button onclick="showScene('scene3')">Next ➡</button>
-  </div>
-</section>
-
-<!-- SCENE 3 -->
-<section id="scene3" class="screen">
-  <h2>🎬 Scene 3: The Surname</h2>
-
-  <p class="riddle">
-    A storyteller by tradition,<br>
-    a thinker by choice.<br><br>
-    Found in books, tales, and wisdom,<br>
-    carried by many, owned by one.
-  </p>
-
-  <p class="answer subtle">Answer: Pandey</p>
-
-  <div class="nav">
     <button onclick="fakeReveal()">Final Reveal 🎁</button>
-  </div>
-</section>
+  </section>
 
-<!-- FAKE REVEAL -->
-<section id="fake" class="screen">
-  <h2 class="dramatic">And your Secret Santa is…</h2>
-  <h1 class="glitch">🎅 Someone Else 😈</h1>
-  <p>(Just kidding…)</p>
-  <button onclick="realReveal()">Reveal the Truth</button>
-</section>
+  <!-- FAKE -->
+  <section id="fake" class="screen">
+    <h2>And the Secret Santa is…</h2>
+    <h1>🎅 Someone Else 😈</h1>
+    <button onclick="realReveal()">Reveal the Truth</button>
+  </section>
 
-<!-- REAL REVEAL -->
-<section id="reveal" class="screen">
-  <h2 class="dramatic">Your Secret Santa 🎄</h2>
-  <h1 class="final-name">✨ Mayank Pandey ✨</h1>
-  <p class="merry">HAPPY NEW YEAR! 🎁</p>
+  <!-- REAL -->
+  <section id="reveal" class="screen">
+    <h2>Your Secret Santa 🎄</h2>
+    <h1>✨ Mayank Pandey ✨</h1>
+  </section>
 
-  <audio id="music" src="christmas-music.mp3"
+  <script src="script.js"></script>
+</body>
+</html>
