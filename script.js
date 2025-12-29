@@ -12,8 +12,8 @@ function showScene(id) {
   target.classList.add("active");
 
   if (id === "scene1") startCountdown();
-  if (id === "scene2") typeWriter("scene2-text", "My name begins with May, but I stay all year...");
-  if (id === "scene3") typeWriter("scene3-text", "A storyteller by tradition, carried through generations.");
+  //if (id === "scene2") typeWriter("scene2-text", "My name begins with May, but I stay all year...");
+  //if (id === "scene3") typeWriter("scene3-text", "A storyteller by tradition, carried through generations.");
 }
 
 // Countdown Scene 1
